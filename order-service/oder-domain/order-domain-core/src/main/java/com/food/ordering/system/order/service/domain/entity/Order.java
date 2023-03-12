@@ -23,7 +23,7 @@ public class Order extends AggregateRoot<OrderId> {
     private List<String> failureMessages;
 
     /***************************************
-     *   Método para inicializar una orden
+     *   Method to initialize order
      ***************************************/
     public void initializeOrder() {
         setId(new OrderId(UUID.randomUUID()));
@@ -33,7 +33,7 @@ public class Order extends AggregateRoot<OrderId> {
     }
 
     /***************************************
-     *   Método que válida la orden
+     *   Method to validate order
      ***************************************/
     public void validateOrder() {
         validateInitialOrder();
@@ -42,7 +42,58 @@ public class Order extends AggregateRoot<OrderId> {
     }
 
     /***************************************
-     *   Método que válida el precio
+     *   Method for pay the order
+     ***************************************/
+    public void pay() {
+        if(orderStatus != OrderStatus.PENDING) {
+            throw new OrderDomainException("Order is not in correct state for pay operations.");
+        }
+        orderStatus = OrderStatus.PAID;
+    }
+
+    /***************************************
+     *   Method for approve the order
+     ***************************************/
+    public void approve() {
+        if(orderStatus != OrderStatus.PAID) {
+            throw new OrderDomainException("Order is not in correct state for approve operations.");
+        }
+        orderStatus = OrderStatus.APPROVED;
+    }
+
+    /***************************************
+     *   Method for initiate cancel the order
+     ***************************************/
+    public void initCancel(List<String> failureMessages) {
+        if(orderStatus != OrderStatus.PAID) {
+            throw new OrderDomainException("Order is not in correct state for initCancel operations.");
+        }
+        orderStatus = OrderStatus.CANCELLING;
+        updateFailureMessages(failureMessages);
+    }
+
+    /***************************************
+     *   Method for cancel the order
+     ***************************************/
+    public void cancel(List<String> failureMessages) {
+        if(!(orderStatus == OrderStatus.CANCELLING || orderStatus == OrderStatus.PENDING)) {
+            throw new OrderDomainException("Order is not in correct state for cancel operations.");
+        }
+        orderStatus = OrderStatus.CANCELLED;
+        updateFailureMessages(failureMessages);
+    }
+
+    private void updateFailureMessages(List<String> failureMessages) {
+        if(this.failureMessages != null && failureMessages != null) {
+            this.failureMessages.addAll(failureMessages.stream().filter( message -> !message.isEmpty()).toList());
+        }
+        if(this.failureMessages == null) {
+            this.failureMessages = failureMessages;
+        }
+    }
+
+    /***************************************
+     *   Method to validate price
      ***************************************/
     private void validateItemsPrice() {
         Money orderItemsTotal = items.stream().map( orderItem -> {

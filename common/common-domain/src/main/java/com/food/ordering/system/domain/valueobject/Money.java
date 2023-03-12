@@ -38,6 +38,7 @@ public class Money {
     /*********************************************************
      *   Método para hacer operaciones de resta
      *********************************************************/
+
     public Money subtract(Money money) {
         return new Money(this.setScale(this.amount.subtract(money.getAmount())));
     }
