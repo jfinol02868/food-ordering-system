@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/order-application.iml" filepath="$PROJECT_DIR$/order-application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-container.iml" filepath="$PROJECT_DIR$/order-container.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-dataaccess.iml" filepath="$PROJECT_DIR$/order-dataaccess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-domain.iml" filepath="$PROJECT_DIR$/order-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-domain-core.iml" filepath="$PROJECT_DIR$/order-domain-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/order-messaging.iml" filepath="$PROJECT_DIR$/order-messaging.iml" />
+    </modules>
+  </component>
+</project>
