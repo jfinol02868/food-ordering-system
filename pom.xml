@@ -12,6 +12,7 @@
   <groupId>com.food.ordering.system</groupId>
   <artifactId>com.food.ordering.system</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>food-ordering-system</name>
   <packaging>pom</packaging>
   <modules>
     <module>order-service</module>
@@ -76,6 +77,11 @@
         <artifactId>depgraph-maven-plugin</artifactId>
         <version>4.0.2</version>
       </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.9.1.2184</version>
+        </plugin>
     </plugins>
   </build>
 </project>
