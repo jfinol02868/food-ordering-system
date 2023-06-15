@@ -12,15 +12,19 @@
   <groupId>com.food.ordering.system</groupId>
   <artifactId>com.food.ordering.system</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>food-ordering-system</name>
   <packaging>pom</packaging>
   <modules>
     <module>order-service</module>
+    <module>common</module>
   </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler-plugin.version>3.10.1</maven.compiler-plugin.version>
     <release.java.version>17</release.java.version>
+      <sonar.organization>solutionsone</sonar.organization>
+      <sonar.host.url>https://sonarcloud.io</sonar.host.url>
   </properties>
 
   <dependencyManagement>
@@ -50,6 +54,11 @@
         <artifactId>order-messaging</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>com.food.ordering.system</groupId>
+        <artifactId>common-domain</artifactId>
+        <version>${project.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -70,6 +79,11 @@
         <artifactId>depgraph-maven-plugin</artifactId>
         <version>4.0.2</version>
       </plugin>
+        <plugin>
+          <groupId>org.sonarsource.scanner.maven</groupId>
+          <artifactId>sonar-maven-plugin</artifactId>
+          <version>3.9.1.2184</version>
+        </plugin>
     </plugins>
   </build>
 </project>
