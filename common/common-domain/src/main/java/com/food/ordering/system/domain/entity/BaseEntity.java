@@ -2,14 +2,14 @@ package com.food.ordering.system.domain.entity;
 
 import java.util.Objects;
 
-public abstract class BaseEntity<ID> {
-    private ID id;
+public abstract class BaseEntity<T> {
+    private T id;
 
-    public ID getId() {
+    public T getId() {
         return id;
     }
 
-    public void setId(ID id) {
+    public void setId(T id) {
         this.id = id;
     }
 
