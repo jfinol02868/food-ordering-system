@@ -57,6 +57,9 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/java-maven@0.3.0
+        
         # For Snyk Open Source you must first set up the development environment for your application's dependencies
         # For example for Node
         #- uses: actions/setup-node@v3
