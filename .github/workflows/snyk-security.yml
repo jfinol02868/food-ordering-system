@@ -20,9 +20,9 @@ name: Snyk Security
 
 on:
   push:
-    branches: ["main" ]
+    branches: ["main", "develop" ]
   pull_request:
-    branches: ["main"]
+    branches: ["main", "develop"]
 
 permissions:
   contents: read
@@ -49,6 +49,13 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B com.food.ordering.system:com.food.ordering.system --file pom.xml
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
         # For Snyk Open Source you must first set up the development environment for your application's dependencies
         # For example for Node
