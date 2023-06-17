@@ -32,8 +32,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Install Snyk
-        run: npm install -g snyk
       - name: Run Snyk para verificar vulnerabilidades
         uses: snyk/actions/maven-3-jdk-17@master
         continue-on-error: true # To make sure that SARIF upload gets called
@@ -42,26 +40,8 @@ jobs:
         with:
           args: --sarif-file-output=snyk.sarif
 
-      - name: Subida de resultado a GitHub Code Scanning
+      - name: Subida de resutado a GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: snyk.sarif
-
-        # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
-      - name: Snyk Open Source monitor
-        run: snyk monitor --all-projects
-
-      - name: Snyk IaC test and report
-        run: snyk iac test --report # || true
-
-      - name: Build a Docker image
-        run: docker build -t your/image-to-test.
-
-      - name: Snyk Container monitor
-        run: snyk container monitor your/image-to-test --file=Dockerfile
-
-      - name: Upload result to GitHub Code Scanning
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: snyk-code.sarif
 
