@@ -39,7 +39,17 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --sarif-file-output=snyk.sarif
+
       - name: Upload result to GitHub Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
           sarif_file: snyk.sarif
+
+        # Runs Snyk Open Source (SCA) analysis and uploads result to Snyk.
+      - name: Snyk Open Source monitor
+        run: snyk monitor --all-projects
+
+        # Runs Snyk Infrastructure as Code (IaC) analysis and uploads result to Snyk.
+        # Use || true to not fail the pipeline.
+      - name: Snyk IaC test and report
+        run: snyk iac test --report # || true
