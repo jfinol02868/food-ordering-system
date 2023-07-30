@@ -73,10 +73,10 @@ public class OrderCreateHelper {
     private Order saveOrder(Order order) {
         Order orderResult = orderRepository.save(order);
         if(Objects.isNull(orderResult)) {
-            log.info("The order whit id {} is not saved.", orderResult.getId().getValue());
-            throw new OrderDomainException("he order whit id "+orderResult.getId().getValue()+" in not saved.");
+            log.info("The order whit id {} is not saved.", order.getId().getValue());
+            throw new OrderDomainException("he order whit id "+order.getId().getValue()+" in not saved.");
         }
-        log.info("The order whit id {} is save.", orderResult.getId().getValue());
+        log.info("The order whit id {} is save.", order.getId().getValue());
         return orderResult;
     }
 }

@@ -2,9 +2,11 @@ package com.food.ordering.system.order.service.test;
 
 import com.food.ordering.system.domain.valueobject.*;
 import com.food.ordering.system.order.service.test.dto.create.CreateOrderCommand;
+import com.food.ordering.system.order.service.test.dto.create.CreateOrderResponse;
 import com.food.ordering.system.order.service.test.dto.create.OrderAddress;
 import com.food.ordering.system.order.service.test.dto.create.OrderItem;
 import com.food.ordering.system.order.service.test.mapper.OrderDataMapper;
+import com.food.ordering.system.order.service.test.port.input.service.OrderApplicationService;
 import com.food.ordering.system.order.service.test.port.output.repository.CustomerRepository;
 import com.food.ordering.system.order.service.test.port.output.repository.OrderRepository;
 import com.food.ordering.system.order.service.test.port.output.repository.RestaurantRepository;
@@ -13,6 +15,8 @@ import com.food.ordering.system.service.domain.entity.Order;
 import com.food.ordering.system.service.domain.entity.Product;
 import com.food.ordering.system.service.domain.entity.Restaurant;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,6 +26,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -37,6 +43,8 @@ public class OrderApplicationServiceTest {
     private CustomerRepository customerRepository;
     @Autowired
     private RestaurantRepository restaurantRepository;
+    @Autowired
+    private OrderApplicationService orderApplicationService;
 
     private CreateOrderCommand createOrderCommand;
     private CreateOrderCommand createOrderCommandWrongPrice;
@@ -139,4 +147,12 @@ public class OrderApplicationServiceTest {
         when(orderRepository.save(any(Order.class))).thenReturn(order);
     }
 
+    @Test
+    @DisplayName(value = "Test create order.")
+    void testCreateOrder() {
+        CreateOrderResponse createOrderResponse = orderApplicationService.createOrder(createOrderCommand);
+        assertEquals(createOrderResponse.getOrderStatus(), OrderStatus.PENDING);
+        assertEquals(createOrderResponse.getMessage(),"Order Created");
+        assertNotNull(createOrderResponse.getOrderTrackingId());
+    }
 }

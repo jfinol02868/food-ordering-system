@@ -8,7 +8,6 @@ import com.food.ordering.system.order.service.test.port.output.repository.OrderR
 import com.food.ordering.system.order.service.test.port.output.repository.RestaurantRepository;
 import com.food.ordering.system.service.domain.OrderDomainService;
 import com.food.ordering.system.service.domain.OrderDomainServiceImpl;
-import com.food.ordering.system.service.domain.entity.Restaurant;
 import org.mockito.Mockito;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

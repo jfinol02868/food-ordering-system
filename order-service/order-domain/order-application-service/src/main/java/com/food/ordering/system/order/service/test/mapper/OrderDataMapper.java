@@ -1,9 +1,6 @@
 package com.food.ordering.system.order.service.test.mapper;
 
-import com.food.ordering.system.domain.valueobject.CustomerId;
-import com.food.ordering.system.domain.valueobject.Money;
-import com.food.ordering.system.domain.valueobject.ProductId;
-import com.food.ordering.system.domain.valueobject.RestaurantId;
+import com.food.ordering.system.domain.valueobject.*;
 import com.food.ordering.system.order.service.test.dto.create.CreateOrderCommand;
 import com.food.ordering.system.order.service.test.dto.create.CreateOrderResponse;
 import com.food.ordering.system.order.service.test.dto.create.OrderAddress;
@@ -37,6 +34,7 @@ public class OrderDataMapper {
                 .restaurantId(new RestaurantId(createOrderCommand.getRestaurantId()))
                 .deliveryAddress(orderAddressToStreetAddress(createOrderCommand.getOrderAddress()))
                 .price(new Money(createOrderCommand.getPrice()))
+                //.orderStatus(OrderStatus.PENDING)
                 .items(orderItemToOrderItemEntity(createOrderCommand.getItems()))
                 .build();
     }
@@ -44,6 +42,7 @@ public class OrderDataMapper {
     public CreateOrderResponse orderToCreateOrderResponse(Order order, String message) {
         return CreateOrderResponse.builder()
                 .orderTrackingId(order.getTrackingId().getValue())
+                .orderStatus(order.getOrderStatus())
                 .orderStatus(order.getOrderStatus())
                 .message(message)
                 .build();

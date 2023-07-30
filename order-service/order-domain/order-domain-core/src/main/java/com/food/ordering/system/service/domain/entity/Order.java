@@ -54,18 +54,18 @@ public class Order extends AggregateRoot<OrderId> {
         validateTotalPrice();
         validateItemPrice();
         if(!Objects.equals(orderStatus, OrderStatus.PENDING)) {
-
+            throw new OrderDomainException("The order status is incorrect for the order: "+super.getId().getValue());
         }
     }
 
     private void validateInitialOrder() {
-        if(Objects.nonNull(orderStatus) || Objects.nonNull(getId())) {
+        if(Objects.isNull(this.orderStatus) || Objects.isNull(super.getId())) {
             throw new OrderDomainException("Order is not in the correct status for initialization.");
         }
     }
 
     private void validateTotalPrice() {
-        if (Objects.isNull(this.price) || this.price.isGreaterThanZero()) {
+        if (this.price == null || !this.price.isGreaterThanZero()) {
             throw new OrderDomainException("Total price must be greater than zero.");
         }
     }
