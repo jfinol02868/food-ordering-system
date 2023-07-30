@@ -1,10 +1,13 @@
 package com.food.ordering.system.domain.valueobject;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.math.RoundingMode;
 import java.util.Objects;
 
 public class Money {
+
+    public static final Money ZERO = new Money(BigDecimal.ZERO);
 
     private final BigDecimal amount;
 
@@ -12,12 +15,12 @@ public class Money {
         this.amount = amount;
     }
 
-    public boolean isGreaterThenZero() {
-        return this.amount != null && this.amount.compareTo(BigDecimal.ZERO) > 0;
+    public boolean isGreaterThanZero() {
+        return Objects.nonNull(this.amount) && this.amount.compareTo(BigDecimal.ZERO) > 0;
     }
 
     public boolean isGreaterThan(Money money) {
-        return this.amount != null && this.amount.compareTo(money.getAmount()) > 0;
+        return  Objects.nonNull(this.amount) && this.amount.compareTo(money.getAmount()) > 0;
     }
 
     public Money add(Money money) {
@@ -29,7 +32,7 @@ public class Money {
     }
 
     public Money multiply(int multiply) {
-        return new Money(this.setScale(this.getAmount().multiply(new BigDecimal(multiply))));
+        return new Money(this.setScale(this.amount.multiply(new BigDecimal(multiply))));
     }
 
     public BigDecimal getAmount() {
