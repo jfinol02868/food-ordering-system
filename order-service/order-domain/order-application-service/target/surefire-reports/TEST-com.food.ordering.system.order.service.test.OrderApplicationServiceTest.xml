@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="1.75" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="1.794" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ES"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire/surefirebooter-20230730163932906_3.jar /home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire 2023-07-30T16-39-31_203-jvmRun1 surefire-20230730163932906_1tmp surefire_0-20230730163932906_2tmp"/>
+    <property name="sun.java.command" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire/surefirebooter-20230730164249273_3.jar /home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire 2023-07-30T16-42-47_553-jvmRun1 surefire-20230730164249273_1tmp surefire_0-20230730164249273_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/test-classes:/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/classes:/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-domain-core/target/order-domain-core-1.0-SNAPSHOT.jar:/home/jfinol02/Documentos/back/food-ordering-system/common/common-domain/target/common-domain-1.0-SNAPSHOT.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.2/spring-boot-starter-validation-3.1.2.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.2/spring-boot-starter-3.1.2.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot/3.1.2/spring-boot-3.1.2.jar:/home/jfinol02/.m2/repository/org/springframework/spring-context/6.0.11/spring-context-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/spring-aop/6.0.11/spring-aop-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/spring-expression/6.0.11/spring-expression-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.2/spring-boot-autoconfigure-3.1.2.jar:/home/jfinol02/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/jfinol02/.m2/repository/org/yaml/snakeyaml/2.0/snakeyaml-2.0.jar:/home/jfinol02/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.11/tomcat-embed-el-10.1.11.jar:/home/jfinol02/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/jfinol02/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/jfinol02/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/jfinol02/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/home/jfinol02/.m2/repository/org/springframework/spring-tx/6.0.11/spring-tx-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/spring-beans/6.0.11/spring-beans-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/spring-core/6.0.11/spring-core-6.0.11.jar:/home/jfinol02/.m2/repository/org/springframework/spring-jcl/6.0.11/spring-jcl-6.0.11.jar:/home/jfinol02/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/jfinol02/.m2/repository/net/bytebuddy/byte-buddy/1.14.5/byte-buddy-1.14.5.jar:/home/jfinol02/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.5/byte-buddy-agent-1.14.5.jar:/home/jfinol02/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.2/spring-boot-starter-test-3.1.2.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-test/3.1.2/spring-boot-test-3.1.2.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.2/spring-boot-test-autoconfigure-3.1.2.jar:/home/jfinol02/.m2/repository/com/jayway/jsonpath/json-path/2.8.0/json-path-2.8.0.jar:/home/jfinol02/.m2/repository/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar:/home/jfinol02/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.0/jakarta.xml.bind-api-4.0.0.jar:/home/jfinol02/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.2/jakarta.activation-api-2.1.2.jar:/home/jfinol02/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/home/jfinol02/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/home/jfinol02/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/home/jfinol02/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/home/jfinol02/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/jfinol02/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/jfinol02/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/jfinol02/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/jfinol02/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/jfinol02/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/jfinol02/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/jfinol02/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/jfinol02/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/jfinol02/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/home/jfinol02/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/home/jfinol02/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/jfinol02/.m2/repository/org/springframework/spring-test/6.0.11/spring-test-6.0.11.jar:/home/jfinol02/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/jfinol02/.m2/repository/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar:/home/jfinol02/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.2/spring-boot-starter-logging-3.1.2.jar:/home/jfinol02/.m2/repository/ch/qos/logback/logback-classic/1.4.8/logback-classic-1.4.8.jar:/home/jfinol02/.m2/repository/ch/qos/logback/logback-core/1.4.8/logback-core-1.4.8.jar:/home/jfinol02/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/home/jfinol02/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/jfinol02/.m2/repository/org/slf4j/jul-to-slf4j/2.0.7/jul-to-slf4j-2.0.7.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire/surefirebooter-20230730163932906_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service/target/surefire/surefirebooter-20230730164249273_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.7+7-Ubuntu-0ubuntu122.04.2"/>
     <property name="user.name" value="jfinol02"/>
@@ -47,7 +47,7 @@
     <property name="user.dir" value="/home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="308280"/>
+    <property name="PID" value="309343"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -57,7 +57,7 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testCreateOrderWithWrongTotalPrice" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.089">
+  <testcase name="testCreateOrderWithWrongTotalPrice" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.078">
     <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -67,21 +67,21 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.1.2)
 
-2023-07-30T16:39:33.612+02:00  INFO 308280 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : Starting OrderApplicationServiceTest using Java 17.0.7 with PID 308280 (started by jfinol02 in /home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service)
-2023-07-30T16:39:33.616+02:00  INFO 308280 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : No active profile set, falling back to 1 default profile: "default"
-2023-07-30T16:39:34.834+02:00  INFO 308280 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : Started OrderApplicationServiceTest in 1.391 seconds (process running for 1.896)
+2023-07-30T16:42:49.950+02:00  INFO 309343 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : Starting OrderApplicationServiceTest using Java 17.0.7 with PID 309343 (started by jfinol02 in /home/jfinol02/Documentos/back/food-ordering-system/order-service/order-domain/order-application-service)
+2023-07-30T16:42:49.953+02:00  INFO 309343 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : No active profile set, falling back to 1 default profile: "default"
+2023-07-30T16:42:51.270+02:00  INFO 309343 --- [           main] .f.o.s.o.s.t.OrderApplicationServiceTest : Started OrderApplicationServiceTest in 1.467 seconds (process running for 1.964)
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateOrder" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.008">
-    <system-out><![CDATA[2023-07-30T16:39:34.963+02:00  INFO 308280 --- [           main] c.f.o.s.s.domain.OrderDomainServiceImpl  : Order with id: b6305dcd-69c1-47c6-99ad-4b96ad9e3811 is initiate.
-2023-07-30T16:39:34.965+02:00  INFO 308280 --- [           main] c.f.o.s.o.s.test.OrderCreateHelper       : The order whit id b6305dcd-69c1-47c6-99ad-4b96ad9e3811 is save.
-2023-07-30T16:39:34.965+02:00  INFO 308280 --- [           main] c.f.o.s.o.s.test.OrderCreateHelper       : Order is created with id b6305dcd-69c1-47c6-99ad-4b96ad9e3811 
-2023-07-30T16:39:34.965+02:00  INFO 308280 --- [           main] c.f.o.s.o.s.t.OrderCreateCommandHandler  : Order is created with id b6305dcd-69c1-47c6-99ad-4b96ad9e3811 
+  <testcase name="testCreateOrder" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.005">
+    <system-out><![CDATA[2023-07-30T16:42:51.387+02:00  INFO 309343 --- [           main] c.f.o.s.s.domain.OrderDomainServiceImpl  : Order with id: 9d6c3bab-4e05-4996-ab69-99cd777a1ff2 is initiate.
+2023-07-30T16:42:51.388+02:00  INFO 309343 --- [           main] c.f.o.s.o.s.test.OrderCreateHelper       : The order whit id 9d6c3bab-4e05-4996-ab69-99cd777a1ff2 is save.
+2023-07-30T16:42:51.388+02:00  INFO 309343 --- [           main] c.f.o.s.o.s.test.OrderCreateHelper       : Order is created with id 9d6c3bab-4e05-4996-ab69-99cd777a1ff2 
+2023-07-30T16:42:51.388+02:00  INFO 309343 --- [           main] c.f.o.s.o.s.t.OrderCreateCommandHandler  : Order is created with id 9d6c3bab-4e05-4996-ab69-99cd777a1ff2 
 ]]></system-out>
   </testcase>
-  <testcase name="testCreateOrderWithWrongProductPrice" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.006"/>
-  <testcase name="testCreateOrderWithPassiveRestaurant" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.006">
-    <system-out><![CDATA[2023-07-30T16:39:34.979+02:00  INFO 308280 --- [           main] c.f.o.s.s.domain.OrderDomainServiceImpl  : The restaurant with id d215b5f8-0249-4dc8-98a3-51fd148cfb41 is not active.
+  <testcase name="testCreateOrderWithWrongProductPrice" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.005"/>
+  <testcase name="testCreateOrderWithPassiveRestaurant" classname="com.food.ordering.system.order.service.test.OrderApplicationServiceTest" time="0.005">
+    <system-out><![CDATA[2023-07-30T16:42:51.399+02:00  INFO 309343 --- [           main] c.f.o.s.s.domain.OrderDomainServiceImpl  : The restaurant with id d215b5f8-0249-4dc8-98a3-51fd148cfb41 is not active.
 ]]></system-out>
   </testcase>
 </testsuite>
