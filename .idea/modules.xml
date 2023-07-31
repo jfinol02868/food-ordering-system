@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/infraestructure.iml" filepath="$PROJECT_DIR$/infraestructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-config-data.iml" filepath="$PROJECT_DIR$/kafka-config-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-consumer.iml" filepath="$PROJECT_DIR$/kafka-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-model.iml" filepath="$PROJECT_DIR$/kafka-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka-producer.iml" filepath="$PROJECT_DIR$/kafka-producer.iml" />
     </modules>
   </component>
 </project>

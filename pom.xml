@@ -24,9 +24,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler-plugin.version>3.8.1</maven.compiler-plugin.version>
     <release.java.version>17</release.java.version>
-      <sonar.organization>solutionsone</sonar.organization>
-      <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.organization>solutionsone</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <mockito.test.version>5.3.1</mockito.test.version>
+    <avro.version>1.11.2</avro.version>
+    <spring.kafka.version>3.0.9</spring.kafka.version>
+    <kafka.avro.serializa.version>7.4.1</kafka.avro.serializa.version>
   </properties>
 
   <dependencyManagement>
@@ -62,10 +65,24 @@
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.mockito</groupId>
-        <artifactId>mockito-core</artifactId>
-        <version>${mockito.test.version}</version>
-        <scope>test</scope>
+        <groupId>food.ordering.system</groupId>
+        <artifactId>kafka-producer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>food.ordering.system</groupId>
+        <artifactId>kafka-consumer</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>food.ordering.system</groupId>
+        <artifactId>kafka-model</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>food.ordering.system</groupId>
+        <artifactId>kafka-config-data</artifactId>
+        <version>${project.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -85,7 +102,12 @@
       <artifactId>snakeyaml</artifactId>
       <version>2.0</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.test.version}</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
