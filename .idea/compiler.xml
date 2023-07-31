@@ -10,6 +10,7 @@
         <module name="order-messaging" />
         <module name="order-application-service" />
         <module name="common-domain" />
+        <module name="kafka" />
         <module name="order-application" />
         <module name="order-domain-core" />
         <module name="order-container" />
@@ -26,6 +27,8 @@
       <module name="com.food.ordering.system" options="-parameters" />
       <module name="common" options="-parameters" />
       <module name="common-domain" options="-parameters" />
+      <module name="infraestructure" options="-parameters" />
+      <module name="kafka" options="-parameters" />
       <module name="order-application" options="-parameters" />
       <module name="order-application-service" options="-parameters" />
       <module name="order-container" options="-parameters" />
