@@ -1,0 +1,3 @@
+com/food/ordering/system/config/data/KafkaConsumerConfigData.class
+com/food/ordering/system/config/data/KafkaProducerConfigData.class
+com/food/ordering/system/config/data/KafkaConfigData.class
