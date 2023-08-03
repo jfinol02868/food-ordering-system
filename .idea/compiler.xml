@@ -7,6 +7,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common-application" />
         <module name="order-messaging" />
         <module name="kafka-model" />
         <module name="order-application-service" />
@@ -29,6 +30,7 @@
       <module name="application" options="-parameters" />
       <module name="com.food.ordering.system" options="-parameters" />
       <module name="common" options="-parameters" />
+      <module name="common-application" options="-parameters" />
       <module name="common-domain" options="-parameters" />
       <module name="infraestructure" options="-parameters" />
       <module name="kafka" options="-parameters" />
