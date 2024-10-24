@@ -1,4 +1,4 @@
 package com.food.ordering.system.domain;
 
-public class AggregatRoot<ID> extends BaseEntity<ID> {
+public abstract class AggregatRoot<T> extends BaseEntity<T> {
 }
